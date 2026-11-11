@@ -3,6 +3,8 @@
 An iPad can't run OpenCode, Ollama or VS Code itself. Run everything on an always-on
 Mac/Linux machine (your computer, a mini PC, or a rented server) and use the iPad to reach it.
 
+Step-by-step iPad guide: [IPAD.md](IPAD.md).
+
 ## One-time setup (on the host)
 1. `./setup/install.sh` (installs OpenCode, Ollama, Tailscale, VS Code, Obsidian).
 2. `sudo apt install tmux` (or `brew install tmux`).
