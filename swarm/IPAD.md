@@ -43,8 +43,10 @@ Tell me which OS it runs and I'll tune the scripts.
     tmux ls                       # find swarm-HHMMSS
     tmux attach -t swarm-HHMMSS   # watch; detach with Ctrl-b d
 Each worker writes `REPORT.md` and, if stuck, `NEEDS_HUMAN.md` in its worktree.
-Optional browser UI: on the host `opencode web --hostname 127.0.0.1`, then in the iPad SSH app
-forward port 4096 and open `http://localhost:4096` in Safari.
+iPad-friendly OpenCode (local model): on the T450 run `swarm/web.sh`, then open the
+`https://<host>.<tailnet>.ts.net` address it prints in Safari on the iPad. It is the same OpenCode,
+using the local Ollama model, served only to your tailnet (it listens on localhost; no public exposure).
+Stop sharing with `sudo tailscale serve reset`.
 
 ## 5. Morning review
     cd ~/work/myrepo && git branch --list 'swarm/*'
