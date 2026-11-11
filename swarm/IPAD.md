@@ -14,6 +14,7 @@ and note that `swarm/*.sh` need WSL or Git Bash, so Linux is the better choice f
 Tell me which OS it runs and I'll tune the scripts.
 
 ## 1. Host (once, on the Mac/Linux machine)
+0. Fastest: `swarm/bootstrap.sh` does steps 1-6 for you on Linux.
 1. `./setup/install.sh` (installs and logs in to Tailscale with `--ssh`).
 2. Install tmux: `brew install tmux` or `sudo apt install tmux`.
 3. Keep the host awake and plugged in. Mac: System Settings > Battery/Energy, or run
