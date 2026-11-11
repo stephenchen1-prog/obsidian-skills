@@ -5,6 +5,11 @@ $Repo = Split-Path -Parent $PSScriptRoot
 winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id Obsidian.Obsidian
 winget install -e --id Ollama.Ollama
+winget install -e --id Tailscale.Tailscale
+# Tailscale SSH server is not available on Windows, so enable OpenSSH Server (reachable over the tailnet)
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Set-Service sshd -StartupType Automatic; Start-Service sshd
+tailscale up
 npm install -g opencode-ai
 ollama pull qwen2.5-coder:7b
 New-Item -ItemType Directory -Force "$HOME\.config\opencode", "$Vault\.claude\skills", "$HOME\.opencode\skills" | Out-Null
